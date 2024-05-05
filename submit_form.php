@@ -6,12 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $mobile = $_POST["mobile"];
     $city = $_POST["city"];
-    $device = $_POST["Device"];
+    // $device = $_POST["Device"];
 
     
-    if ($device === "Device") {
-        $device = 'none';
-    }
+    // if ($device === "Device") {
+    //     $device = 'none';
+    // }
 
     // Perform database insertion
     $servername = "localhost";
@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Construct SQL query
-    $sql = "INSERT INTO form (name, email, city, mobile, device) 
-            VALUES ('$name', '$email', '$city', '$mobile', '$device')";
+    $sql = "INSERT INTO form (name, email, city, mobile) 
+            VALUES ('$name', '$email', '$city', '$mobile')";
 
     // Execute SQL statement
     try {
