@@ -262,37 +262,64 @@
                                 <!-- <input required type="text" class="form-control" name="name" id="name"> -->
                                 <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center">
                                     <div>
-                                        <label class="form-label" for="answer">
-                                            1965
-                                        </label>
-                                        <input  type="radio" name="answer" 
-                                            value="1965" required>
+                                        <label class="form-label" for="answerAR_1965">1965</label>
+                                        <input type="radio" id="answerAR_1965" name="answer" value="1965" required>
                                     </div>
                                     <div>
-                                        <label class="form-label" for="answer">
-                                            1980
-                                        </label>
-                                        <input  type="radio" name="answer" 
-                                            value="1980" required>
+                                        <label class="form-label" for="answerAR_1980">1980</label>
+                                        <input type="radio" id="answerAR_1980" name="answer" value="1980" required>
                                     </div>
                                     <div>
-                                        <label class="form-label" for="answer">
-                                            1975
-                                        </label>
-                                        <input  type="radio" name="answer" 
-                                            value="1975" required>
+                                        <label class="form-label" for="answerAR_1975">1975</label>
+                                        <input type="radio" id="answerAR_1975" name="answer" value="1975" required>
                                     </div>
                                     <div>
-                                        <label class="form-label" for="answer">
-                                            1969
-                                        </label>
-                                        <input  type="radio" name="answer" 
-                                            value="1969" required>
+                                        <label class="form-label" for="answerAR_1969">1969</label>
+                                        <input type="radio" id="answerAR_1969" name="answer" value="1969" required>
                                     </div>
                                 </div>
+                                
+                                <div class="text-center my-5">
+                                    <button type="button" id="nextButton"onclick="showNextQuestions()" class="btn btn-primary btn-lg" >التالي</button>
+                                </div>
+                                <div id="questionError" class="text-danger" style="display: none;">*يرجى اختيار إجابة</div>
+                                <div id="checkError" class="text-danger" style="display: none;">*يرجى الموافقة على الشروط و الاحكام أسفل</div>
                         </div>
+                        <hr>
+                            <div class="container pt-4">
+                                <h6 class="ms-5">شروط الاشتراك فى السحب مع هايسنس:</h6>
+                                <ul>
+                                    <li>
+                                        الاشتراك في المسابقة مجانا ودون اشتراط الشراء.
+                                    </li>
+                                    <li>
+                                        لا يشترط الحضور وقت السحب للحصول على الجائزة.
+                                    </li>
+                                    <li>
+                                        الاجابة على اسئلة المسابقة وكتابة الاسم الثلاثي ورقم الهاتف بخط واضح.
+                                    </li>
+                                    <li>
+                                        أخر موعد لقبول قسيمة الاشتراك بالمسابقة.
+                                    </li>
+                                    <li>
+                                        في حالة تكرار فوز المتسابق فتعتمد له أول جائزة حصل عليها.
+                                    </li>
+                                    <li>
+                                        لا يجوز لمن صدر له الترخيص واصحاب المعارض في المجمع والوكالات الاعلانية وابنائهم وموظفيهم الدخول في المسابقة.
+                                    </li>
+                                    <li>
+                                        تسليم الجوائز للفائزين خالل ٧ أيام من تاريخ اعالن السحب.
+                                    </li>
+                                    <div class="form-check mt-3">
+                                        <input class="" type="checkbox" name="flexCheckDefaultAR" id="flexCheckDefaultAR" required>
+                                        <label class="form-check-label ms-2" for="flexCheckDefaultAR">
+                                            لقد قرأت وأوافق على شروط المشاركة في السحب كما هو مفصل في هذه الصفحة.
+                                        </label>
+                                    </div>
+                                </ul>
+                            </div>
                     </div>
-                    <div id="AfterQuestion-ar">
+                    <div id="AfterQuestion-ar" style="display: none;">
 
                         <div class="row">
                             <div class="mb-3 col-lg-6 col-sm-12">
@@ -319,109 +346,17 @@
                                 <label for="name" class="form-label">رقم الجوال <span class="asteric">*</span></label>
                                 <input required type="text" class="form-control" name="mobile" id="mobile"
                                     placeholder="(+966)">
-    
-    
                             </div>
-    
-    
                             <div class="mb-3 col-lg-6 col-sm-12">
-    
                                 <label for="city" class="form-label">المدينة <span class="asteric">*</span></label>
                                 <input required type="text" class="form-control" name="city" id="city">
                                 <input hidden type="text" class="form-control" name="lang" value="ar">
-    
-    
-    
                             </div>
                         </div>
-    
-                        <!-- <div class="row mt-4">
-                            <div class="mb-3 col-lg-6 col-sm-12">
-                                <label for="device" class="form-label">الجهاز الذى تم شرائه من هايسنس؟(اختياري)</label>
-                                <div class="device-dir">
-                                    <select class="form-select " name="Device">
-    
-                                        <option>
-                                            Device
-                                        </option>
-                                        <option value="TV">
-                                            TV
-                                        </option>
-                                        <option value="Washing Machine">
-                                            Washing Machine
-                                        </option>
-                                        <option value="Dishwasher">
-                                            Dishwasher
-                                        </option>
-                                        <option value="Refrigerator">
-                                            Refrigerator
-                                        </option>
-                                        <option value="Freezer">
-                                            Freezer
-                                        </option>
-                                        <option value="Soundbar">
-                                            Soundbar
-                                        </option>
-    
-                                    </select>
-                                </div>
-    
-                            </div>
-                            <div class="mb-3 col-lg-6 col-sm-12">
-                                <label class="form-label">ارفاق الفاتورة بصيغة (اختيارى ) max 2MB</label>
-                                <div class="input-group flex-nowrap">
-    
-                                    <input id="file-alike-input"
-                                        onclick="$('#upload-button').trigger('click'); return false;" type="text"
-                                        class="form-control file-input" placeholder="" aria-label="Username"
-                                        aria-describedby="addon-wrapping">
-                                    <input name="invoice" accept=".pdf,.jpg" id="upload-button" type="file"
-                                        class="form-control hidden d-none" onchange="getFileData(this);">
-    
-                                </div>
-    
-                            </div>
-    
-    
-                        </div> -->
+
                         <div class="text-center my-5">
     
                             <button type="submit" class="btn btn-primary btn-lg">تسجيل</button>
-                        </div>
-    
-    
-                        <hr>
-                        <div class="container pt-4">
-                            <h6 class="ms-5">شروط الاشتراك فى السحب مع هايسنس:</h6>
-                            <ul>
-                                <li>
-                                    الاشتراك في المسابقة مجانا ودون اشتراط الشراء.
-                                </li>
-                                <li>
-                                    لا يشترط الحضور وقت السحب للحصول على الجائزة.
-                                </li>
-                                <li>
-                                    الاجابة على اسئلة المسابقة وكتابة الاسم الثلاثي ورقم الهاتف بخط واضح.
-                                </li>
-                                <li>
-                                    أخر موعد لقبول قسيمة الاشتراك بالمسابقة.
-                                </li>
-                                <li>
-                                    في حالة تكرار فوز المتسابق فتعتمد له أول جائزة حصل عليها.
-                                </li>
-                                <li>
-                                    لا يجوز لمن صدر له الترخيص واصحاب المعارض في المجمع والوكالات الاعلانية وابنائهم وموظفيهم الدخول في المسابقة.
-                                </li>
-                                <li>
-                                    تسليم الجوائز للفائزين خالل ٧ أيام من تاريخ اعالن السحب.
-                                </li>
-                                <div class="form-check mt-3">
-                                    <input class="" type="checkbox" value="" id="flexCheckDefault" required>
-                                    <label class="form-check-label ms-2" for="flexCheckDefault">
-                                        لقد قرأت وأوافق على شروط المشاركة في السحب كما هو مفصل في هذه الصفحة.
-                                    </label>
-                                </div>
-                            </ul>
                         </div>
                     </div>
                 </form>
@@ -517,6 +452,45 @@
 
         //     }
         // }
+
+        // Function to enable/disable the "Next" button based on radio button and checkbox selection
+        function showNextQuestions() {
+            var radioButtons = document.querySelectorAll('input[type="radio"]');
+            var checkbox = document.getElementById('flexCheckDefaultAR');
+
+            var isRadioButtonSelected = false;
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    isRadioButtonSelected = true;
+                    break;
+                }
+            }
+            var questionError = document.getElementById('questionError');
+            
+            if (!isRadioButtonSelected) {
+                questionError.style.display = 'block';
+                // return;
+            } else {
+                questionError.style.display = 'none';
+            }
+
+            var isCheckboxChecked = checkbox.checked;
+            var checkError = document.getElementById('checkError');
+
+
+            if (!isCheckboxChecked) {
+                checkError.style.display = 'block';
+                // return;
+            } else {
+                checkError.style.display = 'none';
+            }
+
+            if(isRadioButtonSelected && isCheckboxChecked){
+                document.getElementById("Question-ar").style.display = "none";
+                document.getElementById("AfterQuestion-ar").style.display = "block";
+            }
+        }
+
 
         function getUrlParams() {
             var urlParams = {};
