@@ -6,6 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $mobile = $_POST["mobile"];
     $city = $_POST["city"];
+    $answer = $_POST["answer"];
+
     // $device = $_POST["Device"];
 
     
@@ -28,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Construct SQL query
-    $sql = "INSERT INTO form (name, email, city, mobile) 
-            VALUES ('$name', '$email', '$city', '$mobile')";
+    $sql = "INSERT INTO form (name, email, city, mobile,answer) 
+            VALUES ('$name', '$email', '$city', '$mobile','$answer')";
 
     // Execute SQL statement
     try {
