@@ -1,0 +1,227 @@
+
+@font-face {
+    font-family: "Hisens-en";
+    src: url('../fonts/HisenseAlfabet-Regular.otf');
+  }
+  @font-face {
+    font-family: "Hisens-ar";
+    src: url('../fonts/ArbFONTS-GE_SS_Two_Bold_4.otf');
+  }
+  @font-face {
+    font-family: "Hisens-me";
+    src: url('../fonts/HisenseAlfabet-Medium.otf');
+  }
+
+body{
+    font-family: 'Hisens-en';
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows:auto auto 1fr auto;
+}
+
+
+.navbar-brand-container{
+    padding: 10px 90px;
+    direction: ltr;
+    justify-content: space;
+    padding: 1 10px;
+}
+.navbar-btn{
+    cursor: pointer;
+}
+img.navbar-brand{
+    width: 12%;
+}
+@media (max-width: 768px) {
+    .navbar-brand-container{
+        padding: 0 10px;  
+    }
+    img.navbar-brand {
+        width: 20%;
+        max-height: 40px; /* Adjust the maximum height for mobile */
+    }
+}
+.btn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px;
+    border-radius: 8px; /* Adds rounded corners */
+    margin-bottom: 10px; /* Adds space between buttons */
+    text-transform: uppercase; /* Converts text to uppercase */
+}
+@media (max-width: 768px) {
+    .btn {
+        width: 50%;
+        padding: 8px 16px; /* Adjust padding for mobile */
+        font-size: 14px; /* Adjust font size for mobile */
+        white-space: normal;
+    }
+}
+img.feature-image{
+    width: 100%;
+}
+img.feature-image-thank-you{
+    width: 100%;
+    height: 85vh;
+}
+@media (max-width: 768px) {
+    img.feature-image-thank-you {
+        width: 100%;
+        height: 30vh;
+    }
+}
+label{
+    color: #c9cacc;
+}
+.asteric{
+    color: #00a9a5;
+    line-height: 0.6rem; 
+    vertical-align: bottom;
+    font-size: 2rem;
+    margin-left: 0.4vw;
+}
+main{
+    margin-top:100px;
+}
+.main-content-thank-you{
+    margin-top:auto;   
+    margin-bottom:auto;   
+}
+.congratulations {
+    color:rgb(0, 179, 136);
+    padding: 0.5vw 1vw;
+    font-size: 3vw;
+    font-weight: 1000;
+}
+.congratulationsp {
+    font-size: 1vw;
+    font-weight: 1000;
+}
+@media (max-width: 768px) {
+    .congratulations {
+        color:rgb(0, 179, 136);
+        padding: 0.5vw 1vw;
+        font-size: 10vw;
+        font-weight: 1000;
+    }
+    .congratulationsp {
+        font-size: 3vw;
+        font-weight: 1000;
+    }
+}
+.form-control{
+    border-radius: 10px;
+    
+    border: 1.7px solid #00a9a5;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c9cacc;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #c9cacc;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #c9cacc;
+}
+
+
+select.form-select{
+    background-color: #00a9a5;
+    color: white;
+}
+.form-select{
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='white' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='5' d='M2 5l6 6 6-6'/></svg>");
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+}
+.sm-icon {
+    width: 2.5em;
+    height: 2.5em;
+    vertical-align: -.125em;
+    margin: 10px 8px;
+    margin-right: 22px;
+}
+.arabic-sm-icons{
+    direction: ltr;
+}
+
+.input-group-text{
+    background-color: transparent;
+    border: 1.7px solid #00a9a5;
+    border-right: none;
+    border-radius: 10px;
+    cursor: pointer;
+    direction: ltr;
+}
+.file-input{
+    cursor: pointer;
+    /* border-left: none; */
+}
+.device-dir{
+    direction: ltr;
+}
+.footer-icons{
+    direction: ltr;
+
+}
+button{
+    background-color: #00a9a5 !important;
+    
+    border-radius: 0.8rem  !important;
+    width: 15vw;
+    color: #fff !important;
+    font-weight:100;
+    letter-spacing: 1px;
+    border-color: #00a9a5 !important;
+}
+hr{
+    border: 3px solid rgb(201, 202, 204);
+}
+h6{
+    
+    color: #00a9a5;
+}
+ul {
+    list-style-type: none;
+    
+  }
+  li {
+    color: #000;
+    padding-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 0.7rem;
+  }
+  li:before {
+    color: #00a9a5;
+    font-size: 1.7rem;
+    margin-top: -.1rem;
+    content: '•';
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 .6em;
+    line-height: .7em;
+    padding-right: .4em;
+  }
+.form-check-label{
+    font-size: 0.65rem;
+    color: black;
+}
+.form-check-input{
+    border-color: #00a9a5;
+}
+footer{
+    background-color: #00a9a5;
+    padding: 35px 0px;
+}
+footer svg{
+    font-size: 2rem;
+    margin-right: 30px;
+}
