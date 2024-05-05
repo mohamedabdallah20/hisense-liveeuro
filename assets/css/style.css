@@ -109,6 +109,16 @@ main{
         font-weight: 1000;
     }
 }
+.answer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: #c9cacc;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0 auto;
+}
 .form-control{
     border-radius: 10px;
     

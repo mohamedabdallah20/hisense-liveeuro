@@ -30,7 +30,7 @@
     </nav>
     <!-- END NAV_BAR -->
 
-    <div id="EN">
+    <div id="EN" style="display: none;">
 
         <!-- Feature image -->
         <div class="featured-image">
@@ -42,220 +42,93 @@
             <div class="container">
                 <form id="registrationForm" action="submit_form.php" method="post" enctype="multipart/form-data">
 
-                    <div class="row">
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="name" class="form-label">Name <span class="asteric">*</span></label>
-                            <input required type="text" class="form-control" name="name" id="name">
-
-
-                        </div>
-
-
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="email" class="form-label">Email <span class="asteric">*</span></label>
-                            <input required type="email" class="form-control" name="email" id="email">
-                            <div id="emailErrorMessage" class="error-message"></div>
-
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="name" class="form-label">Mobile Number <span class="asteric">*</span></label>
-                            <input required type="text" class="form-control" name="mobile" id="mobile"
-                                placeholder="(+966)">
-
-
-                        </div>
-
-
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="city" class="form-label">City <span class="asteric">*</span></label>
-                            <input required type="text" class="form-control" name="city" id="city">
-                            <input hidden type="text" class="form-control" name="lang" value="en">
-
-
-                        </div>
-                    </div>
-
-                    <!-- <div class="row mt-4">
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="device" class="form-label">Type of device bought from Hisense (optional)</label>
-                            <select class="form-select " name="Device">
-
-                                <option>
-                                    Device
-                                </option>
-                                <option value="TV">
-                                    TV
-                                </option>
-                                <option value="Washing Machine">
-                                    Washing Machine
-                                </option>
-                                <option value="Dishwasher">
-                                    Dishwasher
-                                </option>
-                                <option value="Refrigerator">
-                                    Refrigerator
-                                </option>
-                                <option value="Freezer">
-                                    Freezer
-                                </option>
-                                <option value="Soundbar">
-                                    Soundbar
-                                </option>
-
-                            </select>
-
-                        </div>
-                        <div class="mb-3 col-lg-6 col-sm-12">
-                            <label class="form-label">Attach The Invoice (optional) max 2MB</label>
-                            <div class="input-group flex-nowrap">
-
-                                <span class="input-group-text" id="addon-wrapping"
-                                    onclick="$('#upload-button').trigger('click'); return false;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true"
-                                        focusable="false" viewBox="0 0 512 512">
-                                        <path fill="#00a9a5"
-                                            d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" />
-                                    </svg>
-
-                                </span>
-                                <input id="file-alike-input"
-                                    onclick="$('#upload-button').trigger('click'); return false;" type="text"
-                                    class="form-control file-input" placeholder="JPG or PDF format"
-                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                <input name="invoice" accept=".pdf,.jpg" id="upload-button" type="file"
-                                    class="form-control hidden d-none" onchange="getFileData(this);">
-
+                    <div id="Question-en">
+                        <div class="row text-center">
+                            <div>
+                                <h3 class="congratulations text-center ">
+                                    When was Hisense founded?
+                                </h3>
                             </div>
-
+                                <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
+                                <!-- <input required type="text" class="form-control" name="name" id="name"> -->
+                                <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center">
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1965">
+                                        <label class="form-label" for="answer">
+                                            1965
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1980">
+                                        <label class="form-label" for="answer">
+                                            1980
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1975">
+                                        <label class="form-label" for="answer">
+                                            1975
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1969">
+                                        <label class="form-label" for="answer">
+                                            1969
+                                        </label>
+                                    </div>
+                                </div>
                         </div>
-
-
-                    </div> -->
-                    <div class="text-center my-5">
-
-                        <button type="submit" class="btn btn-primary btn-lg">Register</button>
                     </div>
-
-
-                    <hr>
-                    <div class="container pt-4">
-                        <h6 class="ms-5">Terms and condtions for Win Big this ramadan with hisense raffle draw:</h6>
-                        <ul>
-                            <li>
-                                Customer can participate in this raffle draw through the following microsite
-                                www.hisenseksa.com/ramadan by scanning QR Code or visiting page link.
-                            </li>
-                            <li>
-                                The raffle draw is legible for saudi citizens and residents inside Saudi Arabia only.
-                            </li>
-                            <li>
-                                The prize can’t be changed for monetary values.
-                            </li>
-                            <li>
-                                To be eligible for the prize, the winner’s information entered on the website must match
-                                the
-                                official ID.
-                            </li>
-                            <li>
-                                The gifts will be delivered to the winners within one month of contacting the winner and
-                                have his location.
-                            </li>
-                            <li>
-                                If the winner does not respond within one month of announcement, he or she is not
-                                entitled
-                                to claim the prize and there will be a redraw or given to the other shortlisted.
-                            </li>
-                            <li>
-                                The company has the right to use the winner photo for advertising through online and
-                                social
-                                media upon consent of the winner.
-                            </li>
-                            <li>
-                                The Raffle draw begins from 3rd march to 2nd April and the winner’s announcement will
-                                take
-                                place on the 4th of April under the supervision of Champer of commerce representatives.
-                            </li>
-                            <li>
-                                Purchase is not required to participate in the raffle draw.
-                            </li>
-                            <div class="form-check mt-3">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                                <label class="form-check-label ms-2" for="flexCheckDefault">
-                                    I have read and agree to the terms of participation in the draw as clarified on this
-                                    page.
-                                </label>
+                    <div id="AfterQuestion-en">
+                        <div class="row">
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="name" class="form-label">Name <span class="asteric">*</span></label>
+                                <input required type="text" class="form-control" name="name" id="name">
+    
+    
                             </div>
-                        </ul>
-                    </div>
-                </form>
-            </div>
-        </main>
-
-    </div>
-    <div id="AR" style="display: none;">
-        <!-- Feature image -->
-        <div class="featured-image">
-            <img class="feature-image" src="assets/images/new-Feature-image-home-en.png" />
-        </div>
-        <!-- END Feature image -->
-        <main class="main-content ">
-            <div class="container">
-                <form id="registrationForm" action="submit_form.php" method="post" enctype="multipart/form-data">
-
-                    <div class="row">
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="name" class="form-label">الأسم <span class="asteric">*</span></label>
-                            <input required type="text" class="form-control" name="name" id="name">
-
-
+    
+    
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="email" class="form-label">Email <span class="asteric">*</span></label>
+                                <input required type="email" class="form-control" name="email" id="email">
+                                <div id="emailErrorMessage" class="error-message"></div>
+    
+                            </div>
                         </div>
-
-
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="email" class="form-label">البريد الالكتروني <span
-                                    class="asteric">*</span></label>
-                            <input required type="email" class="form-control" name="email" id="email">
-                            <div id="emailErrorMessage" class="error-message"></div>
-
+                        <div class="row mt-2">
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="name" class="form-label">Mobile Number <span class="asteric">*</span></label>
+                                <input required type="text" class="form-control" name="mobile" id="mobile"
+                                    placeholder="(+966)">
+    
+    
+                            </div>
+    
+    
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="city" class="form-label">City <span class="asteric">*</span></label>
+                                <input required type="text" class="form-control" name="city" id="city">
+                                <input hidden type="text" class="form-control" name="lang" value="en">
+    
+    
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="name" class="form-label">رقم الجوال <span class="asteric">*</span></label>
-                            <input required type="text" class="form-control" name="mobile" id="mobile"
-                                placeholder="(+966)">
-
-
-                        </div>
-
-
-                        <div class="mb-3 col-lg-6 col-sm-12">
-
-                            <label for="city" class="form-label">المدينة <span class="asteric">*</span></label>
-                            <input required type="text" class="form-control" name="city" id="city">
-                            <input hidden type="text" class="form-control" name="lang" value="ar">
-
-
-
-                        </div>
-                    </div>
-
-                    <!-- <div class="row mt-4">
-                        <div class="mb-3 col-lg-6 col-sm-12">
-                            <label for="device" class="form-label">الجهاز الذى تم شرائه من هايسنس؟(اختياري)</label>
-                            <div class="device-dir">
+    
+                        <!-- <div class="row mt-4">
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="device" class="form-label">Type of device bought from Hisense (optional)</label>
                                 <select class="form-select " name="Device">
-
+    
                                     <option>
                                         Device
                                     </option>
@@ -277,82 +150,279 @@
                                     <option value="Soundbar">
                                         Soundbar
                                     </option>
-
+    
                                 </select>
+    
                             </div>
-
-                        </div>
-                        <div class="mb-3 col-lg-6 col-sm-12">
-                            <label class="form-label">ارفاق الفاتورة بصيغة (اختيارى ) max 2MB</label>
-                            <div class="input-group flex-nowrap">
-
-                                <input id="file-alike-input"
-                                    onclick="$('#upload-button').trigger('click'); return false;" type="text"
-                                    class="form-control file-input" placeholder="" aria-label="Username"
-                                    aria-describedby="addon-wrapping">
-                                <input name="invoice" accept=".pdf,.jpg" id="upload-button" type="file"
-                                    class="form-control hidden d-none" onchange="getFileData(this);">
-
+                            <div class="mb-3 col-lg-6 col-sm-12">
+                                <label class="form-label">Attach The Invoice (optional) max 2MB</label>
+                                <div class="input-group flex-nowrap">
+    
+                                    <span class="input-group-text" id="addon-wrapping"
+                                        onclick="$('#upload-button').trigger('click'); return false;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true"
+                                            focusable="false" viewBox="0 0 512 512">
+                                            <path fill="#00a9a5"
+                                                d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" />
+                                        </svg>
+    
+                                    </span>
+                                    <input id="file-alike-input"
+                                        onclick="$('#upload-button').trigger('click'); return false;" type="text"
+                                        class="form-control file-input" placeholder="JPG or PDF format"
+                                        aria-label="Username" aria-describedby="addon-wrapping">
+                                    <input name="invoice" accept=".pdf,.jpg" id="upload-button" type="file"
+                                        class="form-control hidden d-none" onchange="getFileData(this);">
+    
+                                </div>
+    
                             </div>
-
+    
+    
+                        </div> -->
+                        <div class="text-center my-5">
+    
+                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
                         </div>
-
-
-                    </div> -->
-                    <div class="text-center my-5">
-
-                        <button type="submit" class="btn btn-primary btn-lg">تسجيل</button>
+    
+    
+                        <hr>
+                        <div class="container pt-4">
+                            <h6 class="ms-5">Terms and condtions for Win Big this ramadan with hisense raffle draw:</h6>
+                            <ul>
+                                <li>
+                                    Customer can participate in this raffle draw through the following microsite
+                                    www.hisenseksa.com/ramadan by scanning QR Code or visiting page link.
+                                </li>
+                                <li>
+                                    The raffle draw is legible for saudi citizens and residents inside Saudi Arabia only.
+                                </li>
+                                <li>
+                                    The prize can’t be changed for monetary values.
+                                </li>
+                                <li>
+                                    To be eligible for the prize, the winner’s information entered on the website must match
+                                    the
+                                    official ID.
+                                </li>
+                                <li>
+                                    The gifts will be delivered to the winners within one month of contacting the winner and
+                                    have his location.
+                                </li>
+                                <li>
+                                    If the winner does not respond within one month of announcement, he or she is not
+                                    entitled
+                                    to claim the prize and there will be a redraw or given to the other shortlisted.
+                                </li>
+                                <li>
+                                    The company has the right to use the winner photo for advertising through online and
+                                    social
+                                    media upon consent of the winner.
+                                </li>
+                                <li>
+                                    The Raffle draw begins from 3rd march to 2nd April and the winner’s announcement will
+                                    take
+                                    place on the 4th of April under the supervision of Champer of commerce representatives.
+                                </li>
+                                <li>
+                                    Purchase is not required to participate in the raffle draw.
+                                </li>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        I have read and agree to the terms of participation in the draw as clarified on this
+                                        page.
+                                    </label>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
+                </form>
+            </div>
+        </main>
 
-
-                    <hr>
-                    <div class="container pt-4">
-                        <h6 class="ms-5">شروط الاشتراك فى السحب مع هايسنس:</h6>
-                        <ul>
-                            <li>
-                                يمكن للعميل المشاركة فى هذا السحب من خلال زيارة الموقع التالى www.hisenseksa.com/Ramadan
-                                او
-                                مسح رمز الاستجابة السريع .QR Code.
-                            </li>
-                            <li>
-                                السحب متاح للسعوديين والمقمين داخل المملكة العربية السعودية فقطز
-                            </li>
-                            <li>
-                                لا يمكن تبديل الجائزة بقيمتها النقدية او المطالبة بها.
-                            </li>
-                            <li>
-                                يجب ان تتطابق معلومات الفائز التى تم ادخالها فى الموقع مع الهوية الرسمية للتأهل للحصول
-                                على
-                                الجائزة.
-                            </li>
-                            <li>
-                                سيتم تسليم الهداياللفائزين فى غضون شهر واحد من الاتصال بالفائز ومشاركة موقعه.
-                            </li>
-                            <li>
-                                اذا لم يستجب الفائز فى غضون شهر واحد من الاعلان , فلا يحق له المطالبة بالجائزة و ستكون
-                                هناك
-                                اعادة سحب او منح لاخر من القائمة المختصرة.
-                            </li>
-                            <li>
-                                يحق للشركة اسخدام صورة الفائز للاعلان عبر الانترنت ووسائل التواصل الاجتماعى بناء على
-                                موافقة
-                                الفائز.
-                            </li>
-                            <li>
-                                يبدا السحب من 3 مارس الى 2 ابريل وسيتم الاعلان عن الفائزين فى 4 ابريل تحت اشراف ممثلى
-                                الغرفة
-                                التجارية.
-                            </li>
-                            <li>
-                                الشراء غير مطلوب للمشاركة فى السحب.
-                            </li>
-                            <div class="form-check mt-3">
-                                <input class="" type="checkbox" value="" id="flexCheckDefault" required>
-                                <label class="form-check-label ms-2" for="flexCheckDefault">
-                                    لقد قرأت ووافقت على شروط المشاركة في السحب كما هو موضح في هذا الشأن.
-                                </label>
+    </div>
+    <div id="AR" >
+        <!-- Feature image -->
+        <div class="featured-image">
+            <img class="feature-image" src="assets/images/new-Feature-image-home-en.png" />
+        </div>
+        <!-- END Feature image -->
+        <main class="main-content ">
+            <div class="container">
+                <form id="registrationForm" action="submit_form.php" method="post" enctype="multipart/form-data">
+                    <div id="Question-ar">
+                        <div class="row text-center">
+                            <div>
+                                <h3 class="congratulations text-center ">
+                                    متى تأسست هايسنس ؟
+                                </h3>
                             </div>
-                        </ul>
+                                <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
+                                <!-- <input required type="text" class="form-control" name="name" id="name"> -->
+                                <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center">
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1965">
+                                        <label class="form-label" for="answer">
+                                            1965
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1980">
+                                        <label class="form-label" for="answer">
+                                            1980
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1975">
+                                        <label class="form-label" for="answer">
+                                            1975
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input  type="radio" name="answer" 
+                                            value="1969">
+                                        <label class="form-label" for="answer">
+                                            1969
+                                        </label>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="AfterQuestion-ar">
+
+                        <div class="row">
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="name" class="form-label">الأسم <span class="asteric">*</span></label>
+                                <input required type="text" class="form-control" name="name" id="name">
+    
+    
+                            </div>
+    
+    
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="email" class="form-label">البريد الالكتروني <span
+                                        class="asteric">*</span></label>
+                                <input required type="email" class="form-control" name="email" id="email">
+                                <div id="emailErrorMessage" class="error-message"></div>
+    
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="name" class="form-label">رقم الجوال <span class="asteric">*</span></label>
+                                <input required type="text" class="form-control" name="mobile" id="mobile"
+                                    placeholder="(+966)">
+    
+    
+                            </div>
+    
+    
+                            <div class="mb-3 col-lg-6 col-sm-12">
+    
+                                <label for="city" class="form-label">المدينة <span class="asteric">*</span></label>
+                                <input required type="text" class="form-control" name="city" id="city">
+                                <input hidden type="text" class="form-control" name="lang" value="ar">
+    
+    
+    
+                            </div>
+                        </div>
+    
+                        <!-- <div class="row mt-4">
+                            <div class="mb-3 col-lg-6 col-sm-12">
+                                <label for="device" class="form-label">الجهاز الذى تم شرائه من هايسنس؟(اختياري)</label>
+                                <div class="device-dir">
+                                    <select class="form-select " name="Device">
+    
+                                        <option>
+                                            Device
+                                        </option>
+                                        <option value="TV">
+                                            TV
+                                        </option>
+                                        <option value="Washing Machine">
+                                            Washing Machine
+                                        </option>
+                                        <option value="Dishwasher">
+                                            Dishwasher
+                                        </option>
+                                        <option value="Refrigerator">
+                                            Refrigerator
+                                        </option>
+                                        <option value="Freezer">
+                                            Freezer
+                                        </option>
+                                        <option value="Soundbar">
+                                            Soundbar
+                                        </option>
+    
+                                    </select>
+                                </div>
+    
+                            </div>
+                            <div class="mb-3 col-lg-6 col-sm-12">
+                                <label class="form-label">ارفاق الفاتورة بصيغة (اختيارى ) max 2MB</label>
+                                <div class="input-group flex-nowrap">
+    
+                                    <input id="file-alike-input"
+                                        onclick="$('#upload-button').trigger('click'); return false;" type="text"
+                                        class="form-control file-input" placeholder="" aria-label="Username"
+                                        aria-describedby="addon-wrapping">
+                                    <input name="invoice" accept=".pdf,.jpg" id="upload-button" type="file"
+                                        class="form-control hidden d-none" onchange="getFileData(this);">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                        </div> -->
+                        <div class="text-center my-5">
+    
+                            <button type="submit" class="btn btn-primary btn-lg">تسجيل</button>
+                        </div>
+    
+    
+                        <hr>
+                        <div class="container pt-4">
+                            <h6 class="ms-5">شروط الاشتراك فى السحب مع هايسنس:</h6>
+                            <ul>
+                                <li>
+                                    الاشتراك في المسابقة مجانا ودون اشتراط الشراء.
+                                </li>
+                                <li>
+                                    لا يشترط الحضور وقت السحب للحصول على الجائزة.
+                                </li>
+                                <li>
+                                    الاجابة على اسئلة المسابقة وكتابة الاسم الثلاثي ورقم الهاتف بخط واضح.
+                                </li>
+                                <li>
+                                    أخر موعد لقبول قسيمة الاشتراك بالمسابقة.
+                                </li>
+                                <li>
+                                    في حالة تكرار فوز المتسابق فتعتمد له أول جائزة حصل عليها.
+                                </li>
+                                <li>
+                                    لا يجوز لمن صدر له الترخيص واصحاب المعارض في المجمع والوكالات الاعلانية وابنائهم وموظفيهم الدخول في المسابقة.
+                                </li>
+                                <li>
+                                    تسليم الجوائز للفائزين خالل ٧ أيام من تاريخ اعالن السحب.
+                                </li>
+                                <div class="form-check mt-3">
+                                    <input class="" type="checkbox" value="" id="flexCheckDefault" required>
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        لقد قرأت وأوافق على شروط المشاركة في السحب كما هو مفصل في هذه الصفحة.
+                                    </label>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -409,35 +479,44 @@
             $('#file-alike-input').attr('placeholder', filename);
         }
 
-        function changeLanguage() {
-            const englishContent = document.getElementById('EN');
-            const arabicContent = document.getElementById('AR');
-            const langspan = document.getElementById('lang');
+        // const englishContent = document.getElementById('EN');
+        // const arabicContent = document.getElementById('AR');
+        const langspan = document.getElementById('lang');
+        langspan.innerHTML = 'EN | AR';
+
+        // Set the direction of the body to right-to-left (RTL)
+        document.body.dir = 'rtl';
+        document.body.style.fontFamily = "Hisens-ar";
+
+        // function changeLanguage() {
+        //     const englishContent = document.getElementById('EN');
+        //     const arabicContent = document.getElementById('AR');
+        //     const langspan = document.getElementById('lang');
 
 
-            // Toggle the display of English and Arabic content
-            if (englishContent.style.display !== 'none') {
-                // English is visible, switch to Arabic
-                englishContent.style.display = 'none';
-                arabicContent.style.display = 'block';
-                langspan.innerHTML = 'EN | AR';
+        //     // Toggle the display of English and Arabic content
+        //     if (englishContent.style.display !== 'none') {
+        //         // English is visible, switch to Arabic
+        //         englishContent.style.display = 'none';
+        //         arabicContent.style.display = 'block';
+        //         langspan.innerHTML = 'EN | AR';
 
-                // Set the direction of the body to right-to-left (RTL)
-                document.body.dir = 'rtl';
-                document.body.style.fontFamily = "Hisens-ar";
-            } else {
-                // Arabic is visible, switch to English
-                arabicContent.style.display = 'none';
-                englishContent.style.display = 'block';
-                langspan.innerHTML = 'AR | EN';
+        //         // Set the direction of the body to right-to-left (RTL)
+        //         document.body.dir = 'rtl';
+        //         document.body.style.fontFamily = "Hisens-ar";
+        //     } else {
+        //         // Arabic is visible, switch to English
+        //         arabicContent.style.display = 'none';
+        //         englishContent.style.display = 'block';
+        //         langspan.innerHTML = 'AR | EN';
 
 
-                // Set the direction of the body to left-to-right (LTR)
-                document.body.dir = 'ltr';
-                document.body.style.fontFamily = "Hisens-en";
+        //         // Set the direction of the body to left-to-right (LTR)
+        //         document.body.dir = 'ltr';
+        //         document.body.style.fontFamily = "Hisens-en";
 
-            }
-        }
+        //     }
+        // }
 
         function getUrlParams() {
             var urlParams = {};
