@@ -215,7 +215,8 @@ button{
     border-color: #00a9a5 !important;
 }
 hr{
-    border: 3px solid rgb(201, 202, 204);
+    border: 3px solid #00a9a5;
+    width: 100%;
 }
 h6{
     
@@ -252,10 +253,12 @@ ul {
     border-color: #00a9a5;
 }
 footer{
-    background-color: #00a9a5;
+    /* background-color: #fbfbfb; */
+    border: 1px solid rgb(0, 179, 136);
     padding: 35px 0px;
 }
 footer svg{
+    /* color: rgb(0, 179, 136); */
     font-size: 2rem;
     margin-right: 30px;
 }
