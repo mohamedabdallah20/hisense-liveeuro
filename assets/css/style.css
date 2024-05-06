@@ -93,6 +93,14 @@ main{
     font-weight: 1000;
     margin-top: 15px;
 }
+.question{
+    
+    padding: 0.5vw 1vw;
+    font-size: 3vw;
+    font-weight: 1000;
+    margin-top: 15px;
+    color: #00a9a5;
+}
 .congratulationsp {
     font-size: 1vw;
     font-weight: 1000;
@@ -104,9 +112,26 @@ main{
         font-size: 10vw;
         font-weight: 1000;
     }
+    .question{
+        padding: 0.5vw 1vw;
+        font-size: 5vw;
+        font-weight: 1000;
+        color: #00a9a5;
+    }
     .congratulationsp {
         font-size: 3vw;
         font-weight: 1000;
+    }
+    .answer{
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+    .answer input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 10px;
+        height: 10px;
     }
 }
 .answer{
