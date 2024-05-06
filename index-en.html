@@ -51,28 +51,28 @@
                             </div>
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
-                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center">
+                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center english-radio-buttons" >
                                 <div>
-                                    <input type="radio" name="answer" value="1965" required>
-                                    <label class="form-label" for="answer" style="font-family: 'Hisens-en';">
+                                    <input type="radio" id="answer65" name="answer" value="1965" required>
+                                    <label class="form-label" for="answer65" style="font-family: 'Hisens-en';">
                                         1965
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="answer" value="1980" required>
-                                    <label class="form-label" for="answer" style="font-family: 'Hisens-en';">
+                                    <input type="radio" id="answer80" name="answer" value="1980" required>
+                                    <label class="form-label" for="answer80" style="font-family: 'Hisens-en';">
                                         1980
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="answer" value="1975" required>
-                                    <label class="form-label" for="answer" style="font-family: 'Hisens-en';">
+                                    <input type="radio" id="answer75" name="answer" value="1975" required>
+                                    <label class="form-label" for="answer75" style="font-family: 'Hisens-en';">
                                         1975
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="answer" value="1969" required>
-                                    <label class="form-label" for="answer" style="font-family: 'Hisens-en';">
+                                    <input type="radio" id="answer69" name="answer" value="1969" required>
+                                    <label class="form-label" for="answer69" style="font-family: 'Hisens-en';">
                                         1969
                                     </label>
                                 </div>
@@ -131,7 +131,7 @@
                         <div class="row">
                             <div class="mb-3 col-lg-6 col-sm-12">
 
-                                <label for="name" class="form-label">Name <span class="asteric">*</span></label>
+                                <label for="name" class="form-label">Name <span class="asteric" style="vertical-align: bottom;">*</span></label>
                                 <input required type="text" class="form-control" name="name" id="name">
 
 
@@ -140,7 +140,7 @@
 
                             <div class="mb-3 col-lg-6 col-sm-12">
 
-                                <label for="email" class="form-label">Email <span class="asteric">*</span></label>
+                                <label for="email" class="form-label">Email <span class="asteric" style="vertical-align: bottom;">*</span></label>
                                 <input required type="email" class="form-control" name="email" id="email">
                                 <div id="emailErrorMessage" class="error-message"></div>
 
@@ -150,7 +150,7 @@
                             <div class="mb-3 col-lg-6 col-sm-12">
 
                                 <label for="name" class="form-label">Mobile Number <span
-                                        class="asteric">*</span></label>
+                                        class="asteric" style="vertical-align: bottom;">*</span></label>
                                 <input required type="text" class="form-control" name="mobile" id="mobile"
                                     placeholder="(+966)">
 
@@ -160,7 +160,7 @@
 
                             <div class="mb-3 col-lg-6 col-sm-12">
 
-                                <label for="city" class="form-label">City <span class="asteric">*</span></label>
+                                <label for="city" class="form-label">City <span class="asteric" style="vertical-align: bottom;">*</span></label>
                                 <input required type="text" class="form-control" name="city" id="city">
                                 <input hidden type="text" class="form-control" name="lang" value="en">
 
@@ -196,7 +196,7 @@
                             </div>
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
-                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center">
+                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center arabic-radio-buttons">
                                 <div>
                                     <label class="form-label" for="answerAR_1965">1965</label>
                                     <input type="radio" id="answerAR_1965" name="answer" value="1965" required>
@@ -395,7 +395,7 @@
 
         // Function to enable/disable the "Next" button based on radio button and checkbox selection
         function showNextQuestions() {
-            var radioButtons = document.querySelectorAll('input[type="radio"]');
+            var radioButtons = document.querySelectorAll('.arabic-radio-buttons input[type="radio"]');
             var checkbox = document.getElementById('flexCheckDefaultAR');
 
             var isRadioButtonSelected = false;
@@ -431,7 +431,7 @@
             }
         }
         function showNextQuestionsEN() {
-            var radioButtons = document.querySelectorAll('input[type="radio"]');
+            var radioButtons = document.querySelectorAll('.english-radio-buttons input[type="radio"]');
             var checkbox = document.getElementById('flexCheckDefaultEN');
 
             var isRadioButtonSelected = false;
