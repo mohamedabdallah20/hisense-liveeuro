@@ -147,7 +147,7 @@ main{
 }
 .answer label{
     font-weight: 600;
-    color: #000 !important;
+    color: #000 ;
 }
 .answer input[type="radio"] {
     -webkit-appearance: none;
@@ -156,15 +156,18 @@ main{
     border-radius: 2px;
     width: 20px;
     height: 20px;
-    border: 1px solid rgb(0, 179, 136);
+    border: 1px solid #00a9a5;
     margin-right: 5px; /* Adjust as needed */
     background-clip: content-box;
     padding: 2px;
 }
-
+.correct-answer {
+    color: green !important;
+    font-weight: bold !important;
+}
 /* Optional: Add custom styles for checked state */
 .answer input[type="radio"]:checked {
-    background-color: rgb(0, 179, 136); /* Example color */
+    background-color: #00a9a5; /* Example color */
 }
 
 .form-control{

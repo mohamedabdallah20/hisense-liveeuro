@@ -53,25 +53,25 @@
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
                             <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center english-radio-buttons" >
                                 <div>
-                                    <input type="radio" id="answer65" name="answer" value="1965" required>
+                                    <input type="radio" id="answer65" name="answer" value="1965" required onclick="disableOtherRadios('answer65')">
                                     <label class="form-label" for="answer65" style="font-family: 'Hisens-en';">
                                         1965
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="answer80" name="answer" value="1980" required>
+                                    <input type="radio" id="answer80" name="answer" value="1980" required onclick="disableOtherRadios('answer80')">
                                     <label class="form-label" for="answer80" style="font-family: 'Hisens-en';">
                                         1980
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="answer75" name="answer" value="1975" required>
+                                    <input type="radio" id="answer75" name="answer" value="1975" required onclick="disableOtherRadios('answer75')">
                                     <label class="form-label" for="answer75" style="font-family: 'Hisens-en';">
                                         1975
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="answer69" name="answer" value="1969" required>
+                                    <input type="radio" id="answer69" name="answer" value="1969" required onclick="disableOtherRadios('answer69')">
                                     <label class="form-label" for="answer69" style="font-family: 'Hisens-en';">
                                         1969
                                     </label>
@@ -199,19 +199,19 @@
                             <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center arabic-radio-buttons">
                                 <div>
                                     <label class="form-label" for="answerAR_1965">1965</label>
-                                    <input type="radio" id="answerAR_1965" name="answer" value="1965" required>
+                                    <input type="radio" id="answerAR_1965" name="answer" value="1965" required onclick="disableOtherRadiosAR('answerAR_1965')">
                                 </div>
                                 <div>
                                     <label class="form-label" for="answerAR_1980">1980</label>
-                                    <input type="radio" id="answerAR_1980" name="answer" value="1980" required>
+                                    <input type="radio" id="answerAR_1980" name="answer" value="1980" required onclick="disableOtherRadiosAR('answerAR_1980')">
                                 </div>
                                 <div>
                                     <label class="form-label" for="answerAR_1975">1975</label>
-                                    <input type="radio" id="answerAR_1975" name="answer" value="1975" required>
+                                    <input type="radio" id="answerAR_1975" name="answer" value="1975" required onclick="disableOtherRadiosAR('answerAR_1975')">
                                 </div>
                                 <div>
                                     <label class="form-label" for="answerAR_1969">1969</label>
-                                    <input type="radio" id="answerAR_1969" name="answer" value="1969" required>
+                                    <input type="radio" id="answerAR_1969" name="answer" value="1969" required onclick="disableOtherRadiosAR('answerAR_1969')">
                                 </div>
                             </div>
 
@@ -348,6 +348,86 @@
         crossorigin="anonymous"></script>
 
     <script>
+
+        function checkStoredRadioButton() {
+                // Check if a value is stored in localStorage
+                var selectedId = localStorage.getItem('selectedRadioButton');
+
+                // If a value is stored, disable other radio buttons
+                if (selectedId) {
+                    disableOtherRadios(selectedId);
+                    var selectedRadio = document.getElementById(selectedId);
+                    if (selectedRadio) {
+                        selectedRadio.checked = true;
+                    }
+                }
+        }
+        function checkStoredRadioButtonAR() {
+                // Check if a value is stored in localStorage
+                var selectedId = localStorage.getItem('selectedRadioButtonAR');
+
+                // If a value is stored, disable other radio buttons
+                if (selectedId) {
+                    disableOtherRadiosAR(selectedId);
+                    var selectedRadio = document.getElementById(selectedId);
+                    if (selectedRadio) {
+                        selectedRadio.checked = true;
+                    }
+                }
+        }
+        
+        document.addEventListener('DOMContentLoaded', checkStoredRadioButton);
+        document.addEventListener('DOMContentLoaded', checkStoredRadioButtonAR);
+        function disableOtherRadios(selectedId) {
+
+            localStorage.setItem('selectedRadioButton', selectedId);
+            // Get all radio buttons
+             var radios = document.querySelectorAll('.english-radio-buttons input[type="radio"]');
+            // Loop through all radio buttons
+            radios.forEach(function(radio) {
+                // Disable all other radio buttons except the selected one
+                if (radio.id !== selectedId) {
+                    radio.disabled = true;
+                }
+                if (radio.id === 'answer65') {
+                    // Get the corresponding label
+                    var label = document.querySelector('label[for="' + radio.id + '"]');
+                    // Check if the selected radio button is the correct answer
+                    label.classList.add('correct-answer');
+                    // if (selectedId === 'answer65') {
+                    //     // Add a class to highlight the correct answer in green
+                    // } else {
+                    //     // Remove the class to reset the styling if the user didn't select the correct answer
+                    //     label.classList.remove('correct-answer');
+                    // }
+                }
+            });
+        }
+        function disableOtherRadiosAR(selectedId) {
+            localStorage.setItem('selectedRadioButtonAR', selectedId);
+
+            // Get all radio buttons
+             var radios = document.querySelectorAll('.arabic-radio-buttons input[type="radio"]');
+            // Loop through all radio buttons
+            radios.forEach(function(radio) {
+                // Disable all other radio buttons except the selected one
+                if (radio.id !== selectedId) {
+                    radio.disabled = true;
+                }
+                if (radio.id === 'answerAR_1965') {
+                    // Get the corresponding label
+                    var label = document.querySelector('label[for="' + radio.id + '"]');
+                    // Check if the selected radio button is the correct answer
+                    label.classList.add('correct-answer');
+                    // if (selectedId === 'answer65') {
+                    //     // Add a class to highlight the correct answer in green
+                    // } else {
+                    //     // Remove the class to reset the styling if the user didn't select the correct answer
+                    //     label.classList.remove('correct-answer');
+                    // }
+                }
+            });
+        }
         function getFileData(myFile) {
             var file = myFile.files[0];
             var filename = file.name;
