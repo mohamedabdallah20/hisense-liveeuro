@@ -165,6 +165,10 @@ main{
     color: green !important;
     font-weight: bold !important;
 }
+.wrong-answer {
+    color: red !important;
+    font-weight: bold !important;
+}
 /* Optional: Add custom styles for checked state */
 .answer input[type="radio"]:checked {
     background-color: #00a9a5; /* Example color */

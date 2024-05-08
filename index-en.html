@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
     <title>Hisense</title>
 </head>
@@ -225,7 +225,7 @@
                         </div>
                         <hr>
                         <div class="container pt-4">
-                            <h6 class="ms-5">شروط الاشتراك فى السحب مع هايسنس:</h6>
+                            <h6 class="me-5">شروط الاشتراك فى السحب مع هايسنس:</h6>
                             <ul>
                                 <li>
                                     الاشتراك في المسابقة مجانا ودون اشتراط الشراء.
@@ -251,8 +251,8 @@
                                 </li>
                                 <div class="form-check mt-3">
                                     <input class="" type="checkbox" name="flexCheckDefaultAR" id="flexCheckDefaultAR"
-                                        required>
-                                    <label class="form-check-label ms-2" for="flexCheckDefaultAR">
+                                        required style="margin-inline-start: .5rem;">
+                                    <label class="form-check-label me-2" for="flexCheckDefaultAR" style="margin-inline-end: .5rem">
                                         لقد قرأت وأوافق على شروط المشاركة في السحب كما هو مفصل في هذه الصفحة.
                                     </label>
                                 </div>
@@ -383,6 +383,10 @@
             localStorage.setItem('selectedRadioButton', selectedId);
             // Get all radio buttons
              var radios = document.querySelectorAll('.english-radio-buttons input[type="radio"]');
+             if (selectedId !== 'answer65'){
+                 var label = document.querySelector('label[for="' + selectedId + '"]');
+                 label.classList.add('wrong-answer');
+             }
             // Loop through all radio buttons
             radios.forEach(function(radio) {
                 // Disable all other radio buttons except the selected one
@@ -408,6 +412,10 @@
 
             // Get all radio buttons
              var radios = document.querySelectorAll('.arabic-radio-buttons input[type="radio"]');
+             if (selectedId !== 'answerAR_1965'){
+                 var label = document.querySelector('label[for="' + selectedId + '"]');
+                 label.classList.add('wrong-answer');
+             }
             // Loop through all radio buttons
             radios.forEach(function(radio) {
                 // Disable all other radio buttons except the selected one
