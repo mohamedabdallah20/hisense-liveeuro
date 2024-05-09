@@ -96,7 +96,7 @@ main{
 .question{
     
     padding: 0.5vw 1vw;
-    font-size: 3vw;
+    font-size: 3em;
     font-weight: 1000;
     margin-top: 15px;
     color: #00a9a5;
@@ -114,7 +114,7 @@ main{
     }
     .question{
         padding: 0.5vw 1vw;
-        font-size: 5vw;
+        font-size: 1.5em;
         font-weight: 1000;
         color: #00a9a5;
     }
@@ -141,9 +141,9 @@ main{
     flex-direction: row;
     /* font-size: 0.8rem; */
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 1em;
     gap: 10%;
-    font-family: 'Hisens-ar';
+    /* font-family: 'Hisens-ar'; */
 }
 .answer label{
     font-weight: 600;

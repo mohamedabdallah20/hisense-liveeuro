@@ -45,41 +45,34 @@
                     <div id="Question-en">
                         <div class="row text-center">
                             <div>
-                                <h3 class="congratulations text-center" style="color: #00a9a5;">
-                                    When was Hisense established?
+                                <h3 class="congratulations text-center" style="color: #00a9a5;" id="questionEN">
+                                    <!-- When was Hisense established? -->
                                 </h3>
                             </div>
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
-                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center english-radio-buttons">
-                                <div class="felx-wrap">
-                                    <input type="radio" id="answer65" name="answer" value="1965" required
-                                        onclick="disableOtherRadios('answer65')">
-                                    <label class="form-label" for="answer65" style="font-family: 'Hisens-en';">
+                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center english-radio-buttons felx-wrap">
+                                <!-- <div>
+                                    <input type="radio" id="answerEN1" name="answer" value="1965" required
+                                        onclick="disableOtherRadiosEN('answerEN1')">
+                                    <label class="form-label" for="answerEN1" style="font-family: 'Hisens-en';">
                                         1965
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="answer80" name="answer" value="1980" required
-                                        onclick="disableOtherRadios('answer80')">
-                                    <label class="form-label" for="answer80" style="font-family: 'Hisens-en';">
+                                    <input type="radio" id="answerEN2" name="answer" value="1980" required
+                                        onclick="disableOtherRadiosEN('answerEN2')">
+                                    <label class="form-label" for="answerEN2" style="font-family: 'Hisens-en';">
                                         1980
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="answer75" name="answer" value="1975" required
-                                        onclick="disableOtherRadios('answer75')">
-                                    <label class="form-label" for="answer75" style="font-family: 'Hisens-en';">
-                                        1975
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="answer69" name="answer" value="1969" required
-                                        onclick="disableOtherRadios('answer69')">
-                                    <label class="form-label" for="answer69" style="font-family: 'Hisens-en';">
+                                    <input type="radio" id="answerEN3" name="answer" value="1969" required
+                                        onclick="disableOtherRadiosEN('answerEN3')">
+                                    <label class="form-label" for="answerEN3" style="font-family: 'Hisens-en';">
                                         1969
                                     </label>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="text-center my-5">
                                 <button type="button" id="nextButtonEN" onclick="showNextQuestionsEN()"
@@ -197,33 +190,28 @@
                     <div id="Question-ar">
                         <div class="row text-center">
                             <div>
-                                <h3 class="question text-center ">
-                                    متى تأسست هايسنس ؟
+                                <h3 class="question text-center " id="questionAR">
+                                    <!-- متى تأسست هايسنس ؟ -->
                                 </h3>
                             </div>
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
-                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center arabic-radio-buttons">
-                                <div class="felx-wrap">
-                                    <label class="form-label" for="answerAR_1965">1965</label>
-                                    <input type="radio" id="answerAR_1965" name="answer" value="1965" required
-                                        onclick="disableOtherRadiosAR('answerAR_1965')">
+                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center arabic-radio-buttons felx-wrap">
+                                <!-- <div >
+                                    <label class="form-label" for="answerAR1">1965</label>
+                                    <input type="radio" id="answerAR1" name="answer" value="1965" required
+                                        onclick="disableOtherRadiosAR('answerAR1')">
                                 </div>
                                 <div>
-                                    <label class="form-label" for="answerAR_1980">1980</label>
-                                    <input type="radio" id="answerAR_1980" name="answer" value="1980" required
-                                        onclick="disableOtherRadiosAR('answerAR_1980')">
+                                    <label class="form-label" for="answerAR2">1980</label>
+                                    <input type="radio" id="answerAR2" name="answer" value="1980" required
+                                        onclick="disableOtherRadiosAR('answerAR2')">
                                 </div>
                                 <div>
-                                    <label class="form-label" for="answerAR_1975">1975</label>
-                                    <input type="radio" id="answerAR_1975" name="answer" value="1975" required
-                                        onclick="disableOtherRadiosAR('answerAR_1975')">
-                                </div>
-                                <div>
-                                    <label class="form-label" for="answerAR_1969">1969</label>
-                                    <input type="radio" id="answerAR_1969" name="answer" value="1969" required
-                                        onclick="disableOtherRadiosAR('answerAR_1969')">
-                                </div>
+                                    <label class="form-label" for="answerAR3">1969</label>
+                                    <input type="radio" id="answerAR3" name="answer" value="1969" required
+                                        onclick="disableOtherRadiosAR('answerAR3')">
+                                </div> -->
                             </div>
 
                             <div class="text-center my-5">
@@ -361,41 +349,214 @@
 
     <script>
 
-        function checkStoredRadioButton() {
-            // Check if a value is stored in localStorage
-            var selectedId = localStorage.getItem('selectedRadioButton');
+        const Questions = [
+            {
+                id: "1",
+                ar: {
+                    question: "في أي عام تأسست شركة هايسنس ؟",
+                    correct:"1969",
+                    options: ["1969", "1996","2000"],
 
-            // If a value is stored, disable other radio buttons
-            if (selectedId) {
-                disableOtherRadios(selectedId);
-                var selectedRadio = document.getElementById(selectedId);
-                if (selectedRadio) {
-                    selectedRadio.checked = true;
+                }, en: {
+                    question: "In which Year has Hisense established?",
+                    correct:"1969",
+                    options: ["1969", "1996","2000"],
                 }
+            },
+            {
+                id: "2",
+                ar: {
+                    question: "لكم عام تم رعاية بطولة اروروبا من هايسنس ؟",
+                    correct:"3 أعوام",
+                    options: ["عامين", "3 أعوام","عام واحد"],
+
+                }, en: {
+                    question: "How many times have Hisense sponsored EUFA?",
+                    correct:"3 times",
+                    options: ["2 times", "3 times","1 time"],
+                }
+            },
+            {
+                id: "3",
+                ar: {
+                    question: "ما أكبر حجم لشاشة u7 من هايسنس ؟",
+                    correct:"100 انش",
+                    options: ["100 انش", "85 انش","65 انش"],
+
+                }, en: {
+                    question: "What’s the biggest inch screen for U7 Hisense TV?",
+                    correct:"100 inch",
+                    options: ["65 inch", "85 inch","100 inch"],
+                }
+            },
+            {
+                id: "4",
+                ar: {
+                    question: "ما هي التقنية التي تعتمد عليها Hisense Laser Tv: ؟",
+                    correct:"ضوء الليزر ثلاثي الألوان",
+                    options: ["ضوء الليزر ثلاثي الألوان", "ضوء الليزر ثنائي الألوان","ضوء الليزر أحادي اللون"],
+
+                }, en: {
+                    question: "What’s TRICHROM technology in Laser TV indicates?",
+                    correct:"The RGP triple colour laser light",
+                    options: ["The RGP triple colour laser light", "The RGP Double colour Laser light","The RGP Primary colour Laser Light"],
+                }
+            },
+            {
+                id: "5",
+                ar: {
+                    question: "ما هو التطبيق الذي تستطيع تشغيل غسالة هايسنس 5s series عن بعد:",
+                    correct:"Connect life",
+                    options: ["VIDAA", "Connect life","Hisense Care hub"],
+
+                }, en: {
+                    question: "What’s the application to remotely control Hisense 5S WM?",
+                    correct:"Connect life",
+                    options: ["Hisense Care Hub", "Connect life","VIDAA"],
+                }
+            },
+        ]
+        questionIndex = 0;
+        questionsTotals = 5;
+
+        // console.log(questionId);
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
             }
+            return array;
+        }
+
+        // Create an array containing numbers from 0 to 17
+        const numbersArray = Array.from({ length: questionsTotals }, (_, index) => index);
+
+        // Shuffle the array randomly
+        const qustionsIds = shuffleArray(numbersArray);
+
+        // console.log(qustionsIds);
+        function checkStoredRadioButton() {
+            
+            // var selectedId = localStorage.getItem('selectedRadioButton');
+
+            // if (selectedId) {
+            //     disableOtherRadiosEN(selectedId);
+            //     var selectedRadio = document.getElementById(selectedId);
+            //     if (selectedRadio) {
+            //         selectedRadio.checked = true;
+            //     }
+            // }
         }
         function checkStoredRadioButtonAR() {
-            // Check if a value is stored in localStorage
-            var selectedId = localStorage.getItem('selectedRadioButtonAR');
+            
+            // var selectedId = localStorage.getItem('selectedRadioButtonAR');
 
-            // If a value is stored, disable other radio buttons
-            if (selectedId) {
-                disableOtherRadiosAR(selectedId);
-                var selectedRadio = document.getElementById(selectedId);
-                if (selectedRadio) {
-                    selectedRadio.checked = true;
-                }
+            // if (selectedId) {
+            //     disableOtherRadiosAR(selectedId);
+            //     var selectedRadio = document.getElementById(selectedId);
+            //     if (selectedRadio) {
+            //         selectedRadio.checked = true;
+            //     }
+            // }
+        }
+        function answersAndLabelsAR(answerId,answer,iscorrect) {
+            const container = document.createElement('div');
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.id = answerId;
+            input.name = 'answer';
+            input.value = answer;
+            input.required = true;
+            input.setAttribute('data-iscorrect', iscorrect);
+            input.onclick = function() {
+                disableOtherRadiosAR(answerId);
+            };
+
+            const label = document.createElement('label');
+            label.htmlFor = answerId;
+            label.className = 'form-label';
+            label.style.fontFamily = 'Hisens-ar  !important';
+            label.textContent = answer;
+
+            container.appendChild(label);
+            container.appendChild(input);
+
+            return container;
+        }
+        function loadquestionsAndAnswersAR(questionId) {
+            const question = Questions[questionId].ar.question;
+            const questionContainer = document.getElementById('questionAR');
+            questionContainer.innerHTML = question;
+            const answers = Questions[questionId].ar.options;
+            const correctAnswer = Questions[questionId].ar.correct;
+
+            const answersContainer = document.querySelector('.arabic-radio-buttons');
+            answersContainer.innerHTML = "";
+
+        
+            for (let i = 0; i < answers.length; i++) {
+                // answers.push(answersAndLabelsAR('answerAR' + i+1,answers[i]));
+                const answerId = 'answerAR' + (i + 1);
+                const answerElement = answersAndLabelsAR(answerId, answers[i], answers[i] === correctAnswer);
+                answersContainer.appendChild(answerElement);
             }
         }
+        document.addEventListener('DOMContentLoaded', loadquestionsAndAnswersAR(qustionsIds[0]));
+        function answersAndLabelsEN(answerId,answer,iscorrect) {
+            const container = document.createElement('div');
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.id = answerId;
+            input.name = 'answer';
+            input.value = answer;
+            input.required = true;
+            input.setAttribute('data-iscorrect', iscorrect);
+
+            input.onclick = function() {
+                disableOtherRadiosEN(answerId);
+            };
+
+            const label = document.createElement('label');
+            label.htmlFor = answerId;
+            label.className = 'form-label';
+            label.style.fontFamily = 'Hisens-en !important';
+            label.textContent = answer;
+
+            container.appendChild(input);
+            container.appendChild(label);
+
+            return container;
+        }
+        function loadquestionsAndAnswersEN(questionId) {
+            const question = Questions[questionId].en.question;
+            const questionContainer = document.getElementById('questionEN');
+            questionContainer.innerHTML = question;
+            const answers = Questions[questionId].en.options;
+            const correctAnswer = Questions[questionId].en.correct;
+
+
+            const answersContainer = document.querySelector('.english-radio-buttons');
+            answersContainer.innerHTML = "";
+
+        
+            for (let i = 0; i < answers.length; i++) {
+                // answers.push(answersAndLabelsAR('answerAR' + i+1,answers[i]));
+                const answerId = 'answerEN' + (i + 1);
+                const answerElement = answersAndLabelsEN(answerId, answers[i],answers[i] === correctAnswer);
+                answersContainer.appendChild(answerElement);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', loadquestionsAndAnswersEN(qustionsIds[0]));
 
         document.addEventListener('DOMContentLoaded', checkStoredRadioButton);
         document.addEventListener('DOMContentLoaded', checkStoredRadioButtonAR);
-        function disableOtherRadios(selectedId) {
+        function disableOtherRadiosEN(selectedId) {
 
-            localStorage.setItem('selectedRadioButton', selectedId);
+            // localStorage.setItem('selectedRadioButton', selectedId);
             // Get all radio buttons
             var radios = document.querySelectorAll('.english-radio-buttons input[type="radio"]');
-            if (selectedId !== 'answer69') {
+
+            if (document.getElementById(selectedId).getAttribute('data-iscorrect') !== 'true') {
                 var label = document.querySelector('label[for="' + selectedId + '"]');
                 label.classList.add('wrong-answer');
             }
@@ -405,7 +566,7 @@
                 if (radio.id !== selectedId) {
                     radio.disabled = true;
                 }
-                if (radio.id === 'answer69') {
+                if (radio.getAttribute('data-iscorrect') === 'true') {
                     // Get the corresponding label
                     var label = document.querySelector('label[for="' + radio.id + '"]');
                     // Check if the selected radio button is the correct answer
@@ -418,13 +579,21 @@
                     // }
                 }
             });
+            setTimeout(function () {
+                if (document.getElementById(selectedId).getAttribute('data-iscorrect') !== 'true') {
+                    questionIndex=(questionIndex + 1)%questionsTotals;
+                    loadquestionsAndAnswersEN(qustionsIds[questionIndex]);
+                    loadquestionsAndAnswersAR(qustionsIds[questionIndex]);
+                    return;
+                }
+            },500)
         }
         function disableOtherRadiosAR(selectedId) {
-            localStorage.setItem('selectedRadioButtonAR', selectedId);
+            // localStorage.setItem('selectedRadioButtonAR', selectedId);
 
             // Get all radio buttons
             var radios = document.querySelectorAll('.arabic-radio-buttons input[type="radio"]');
-            if (selectedId !== 'answerAR_1969') {
+            if (document.getElementById(selectedId).getAttribute('data-iscorrect') !== 'true') {
                 var label = document.querySelector('label[for="' + selectedId + '"]');
                 label.classList.add('wrong-answer');
             }
@@ -434,7 +603,7 @@
                 if (radio.id !== selectedId) {
                     radio.disabled = true;
                 }
-                if (radio.id === 'answerAR_1969') {
+                if (radio.getAttribute('data-iscorrect') === 'true') {
                     // Get the corresponding label
                     var label = document.querySelector('label[for="' + radio.id + '"]');
                     // Check if the selected radio button is the correct answer
@@ -447,6 +616,14 @@
                     // }
                 }
             });
+            setTimeout(function() {
+                if (document.getElementById(selectedId).getAttribute('data-iscorrect') !== 'true') {
+                    questionIndex=(questionIndex + 1)%questionsTotals;
+                    loadquestionsAndAnswersAR(qustionsIds[questionIndex]);
+                    loadquestionsAndAnswersEN(qustionsIds[questionIndex]);
+                    return;
+                }
+            }, 500);
         }
         function getFileData(myFile) {
             var file = myFile.files[0];
