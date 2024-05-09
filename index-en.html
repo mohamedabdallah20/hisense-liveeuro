@@ -52,7 +52,7 @@
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
                             <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center english-radio-buttons" >
-                                <div>
+                                <div class="felx-wrap">
                                     <input type="radio" id="answer65" name="answer" value="1965" required onclick="disableOtherRadios('answer65')">
                                     <label class="form-label" for="answer65" style="font-family: 'Hisens-en';">
                                         1965
@@ -197,7 +197,7 @@
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
                             <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center arabic-radio-buttons">
-                                <div>
+                                <div class="felx-wrap">
                                     <label class="form-label" for="answerAR_1965">1965</label>
                                     <input type="radio" id="answerAR_1965" name="answer" value="1965" required onclick="disableOtherRadiosAR('answerAR_1965')">
                                 </div>
@@ -383,7 +383,7 @@
             localStorage.setItem('selectedRadioButton', selectedId);
             // Get all radio buttons
              var radios = document.querySelectorAll('.english-radio-buttons input[type="radio"]');
-             if (selectedId !== 'answer65'){
+             if (selectedId !== 'answer69'){
                  var label = document.querySelector('label[for="' + selectedId + '"]');
                  label.classList.add('wrong-answer');
              }
@@ -393,12 +393,12 @@
                 if (radio.id !== selectedId) {
                     radio.disabled = true;
                 }
-                if (radio.id === 'answer65') {
+                if (radio.id === 'answer69') {
                     // Get the corresponding label
                     var label = document.querySelector('label[for="' + radio.id + '"]');
                     // Check if the selected radio button is the correct answer
                     label.classList.add('correct-answer');
-                    // if (selectedId === 'answer65') {
+                    // if (selectedId === 'answer69') {
                     //     // Add a class to highlight the correct answer in green
                     // } else {
                     //     // Remove the class to reset the styling if the user didn't select the correct answer
@@ -412,7 +412,7 @@
 
             // Get all radio buttons
              var radios = document.querySelectorAll('.arabic-radio-buttons input[type="radio"]');
-             if (selectedId !== 'answerAR_1965'){
+             if (selectedId !== 'answerAR_1969'){
                  var label = document.querySelector('label[for="' + selectedId + '"]');
                  label.classList.add('wrong-answer');
              }
@@ -422,12 +422,12 @@
                 if (radio.id !== selectedId) {
                     radio.disabled = true;
                 }
-                if (radio.id === 'answerAR_1965') {
+                if (radio.id === 'answerAR_1969') {
                     // Get the corresponding label
                     var label = document.querySelector('label[for="' + radio.id + '"]');
                     // Check if the selected radio button is the correct answer
                     label.classList.add('correct-answer');
-                    // if (selectedId === 'answer65') {
+                    // if (selectedId === 'answer69') {
                     //     // Add a class to highlight the correct answer in green
                     // } else {
                     //     // Remove the class to reset the styling if the user didn't select the correct answer
