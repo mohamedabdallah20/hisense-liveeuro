@@ -51,25 +51,25 @@
                             </div>
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
-                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center english-radio-buttons felx-wrap">
+                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center english-radio-buttons flex-wrap">
                                 <!-- <div>
                                     <input type="radio" id="answerEN1" name="answer" value="1965" required
                                         onclick="disableOtherRadiosEN('answerEN1')">
-                                    <label class="form-label" for="answerEN1" style="font-family: 'Hisens-en';">
+                                    <label class="form-label" for="answerEN1" style="font-family: 'Hisense-en';">
                                         1965
                                     </label>
                                 </div>
                                 <div>
                                     <input type="radio" id="answerEN2" name="answer" value="1980" required
                                         onclick="disableOtherRadiosEN('answerEN2')">
-                                    <label class="form-label" for="answerEN2" style="font-family: 'Hisens-en';">
+                                    <label class="form-label" for="answerEN2" style="font-family: 'Hisense-en';">
                                         1980
                                     </label>
                                 </div>
                                 <div>
                                     <input type="radio" id="answerEN3" name="answer" value="1969" required
                                         onclick="disableOtherRadiosEN('answerEN3')">
-                                    <label class="form-label" for="answerEN3" style="font-family: 'Hisens-en';">
+                                    <label class="form-label" for="answerEN3" style="font-family: 'Hisense-en';">
                                         1969
                                     </label>
                                 </div> -->
@@ -85,7 +85,7 @@
                         </div>
                         <hr>
                         <div class="container pt-4">
-                            <h6 class="ms-5">Terms and condtions for Win Big this ramadan with hisense raffle draw:</h6>
+                            <h6 class="ms-5">Terms and conditions for Win Hisense raffle draw:</h6>
                             <ul>
                                 <li>
                                     Participation in the contest is free and does not require any purchase.
@@ -122,6 +122,9 @@
                                     </label>
                                 </div>
                             </ul>
+                        </div>
+                        <div class="text-end">
+                            <p> COC permission number : 10822 </p>
                         </div>
                     </div>
                     <div id="AfterQuestion-en" style="display: none;">
@@ -196,7 +199,7 @@
                             </div>
                             <!-- <label for="answer" class="form-label">Name <span class="asteric">*</span></label> -->
                             <!-- <input required type="text" class="form-control" name="name" id="name"> -->
-                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center arabic-radio-buttons felx-wrap">
+                            <div class="d-flex mb-3 col-lg-6 col-sm-12 answer text-center arabic-radio-buttons flex-wrap">
                                 <!-- <div >
                                     <label class="form-label" for="answerAR1">1965</label>
                                     <input type="radio" id="answerAR1" name="answer" value="1965" required
@@ -257,6 +260,9 @@
                                     </label>
                                 </div>
                             </ul>
+                        </div>
+                        <div class="text-start">
+                            <p>تصريح شهادة المطابقة: 10822</p>
                         </div>
                     </div>
                     <div id="AfterQuestion-ar" style="display: none;">
@@ -550,7 +556,7 @@
                 ar: {
                     question: "ما هو نظام تشغيل تلفزيون هايسنس؟",
                     correct:"Vidaa",
-                    options: ["Chrome", "Vidaa","Androis"],
+                    options: ["Chrome", "Vidaa","Android"],
 
                 }, en: {
                     question: "What is the operating system of Hisense TV?",
@@ -630,6 +636,7 @@
         }
         function answersAndLabelsAR(answerId,answer,iscorrect) {
             const container = document.createElement('div');
+            container.className = 'd-flex';
             const input = document.createElement('input');
             input.type = 'radio';
             input.id = answerId;
@@ -644,7 +651,7 @@
             const label = document.createElement('label');
             label.htmlFor = answerId;
             label.className = 'form-label';
-            label.style.fontFamily = 'Hisens-ar  !important';
+            label.style.fontFamily = 'Hisense-ar  !important';
             label.textContent = answer;
 
             container.appendChild(label);
@@ -673,6 +680,7 @@
         document.addEventListener('DOMContentLoaded', loadquestionsAndAnswersAR(qustionsIds[0]));
         function answersAndLabelsEN(answerId,answer,iscorrect) {
             const container = document.createElement('div');
+            container.className = 'd-flex';
             const input = document.createElement('input');
             input.type = 'radio';
             input.id = answerId;
@@ -688,7 +696,7 @@
             const label = document.createElement('label');
             label.htmlFor = answerId;
             label.className = 'form-label';
-            label.style.fontFamily = 'Hisens-en !important';
+            label.style.fontFamily = 'Hisense-en !important';
             label.textContent = answer;
 
             container.appendChild(input);
@@ -807,7 +815,7 @@
 
         // Set the direction of the body to right-to-left (RTL)
         document.body.dir = 'rtl';
-        document.body.style.fontFamily = "Hisens-ar";
+        document.body.style.fontFamily = "Hisense-ar";
 
         function changeLanguage() {
             const englishContent = document.getElementById('EN');
@@ -824,7 +832,7 @@
 
                 // Set the direction of the body to right-to-left (RTL)
                 document.body.dir = 'rtl';
-                document.body.style.fontFamily = "Hisens-ar";
+                document.body.style.fontFamily = "Hisense-ar";
             } else {
                 // Arabic is visible, switch to English
                 arabicContent.style.display = 'none';
@@ -834,7 +842,7 @@
 
                 // Set the direction of the body to left-to-right (LTR)
                 document.body.dir = 'ltr';
-                document.body.style.fontFamily = "Hisens-en";
+                document.body.style.fontFamily = "Hisense-en";
 
             }
         }
