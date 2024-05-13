@@ -25,9 +25,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="loginModalLabel">Login</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <div class="d-flex justify-content-end">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
         </div>
         <div class="modal-body">
           <form action="login.php" method="post">
@@ -46,9 +48,43 @@
     </div>
   </div>
   <!-- Trigger/Login Button -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
-    Login
-  </button>
+  <div class="text-center">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+        Login
+      </button>
+  </div>
 </body>
+<style>
+    /* Style for centering the login button */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use full height of the viewport */
+    margin: 0;
+    background-color: #f8f9fa; /* Light gray background, you can change it as per your design */
+}
 
+/* Enhancements for modal and buttons */
+.modal-content {
+    padding: 20px;
+}
+
+.btn-primary {
+    width: 100%; /* Makes the button expand to the width of its container */
+    margin-top: 10px; /* Adds some space above the button */
+}
+
+/* Style adjustments for form input */
+.form-group label {
+    font-weight: bold; /* Makes label text bold */
+}
+
+.form-control {
+    margin-bottom: 10px; /* Adds space below each input */
+}
+button{
+    width: 100%;
+}
+</style>
 </html>
