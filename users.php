@@ -6,6 +6,26 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: index-en.html"); // Redirect to login page
     exit;
 }
+function exportUsersToCSV($conn) {
+    header('Content-Type: text/csv; charset=utf-8');
+    header('Content-Disposition: attachment; filename=users.csv');
+    $output = fopen("php://output", "w");
+    fputcsv($output, array('Name', 'Email', 'City', 'Mobile'));  // Column headings
+
+    $query = "SELECT name, email, city, mobile FROM form"; // Adjust the column names as per your database schema
+    $result = $conn->query($query);
+
+    while ($row = $result->fetch_assoc()) {
+        fputcsv($output, $row);  // Add rows to CSV
+    }
+
+    fclose($output);
+    $conn->close();
+    exit;
+}
+if (isset($_POST['export'])) {
+    exportUsersToCSV($conn);
+}
 
 echo '<!DOCTYPE html><html lang="en"><head>';
 echo '<meta charset="UTF-8">';
@@ -19,12 +39,16 @@ echo '.table tbody td { vertical-align: middle; border-top: solid 1px #dee2e6; }
 echo '.table-hover tbody tr:hover { background-color: #f8f9fa; }';
 echo '</style>';
 echo '</head><body>';
+echo "<div class='container mt-4'>";
+
+echo "<form method='post'>";
+echo "<button type='submit' name='export' class='btn btn-success mb-3'>Export Users to CSV</button>";
+echo "</form>";
 
 $sql = "SELECT name, email, city, mobile FROM form"; // Adjust the column names as per your database schema
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<div class='container mt-4'>";
     echo "<table class='table table-hover'>"; // Added 'table-hover' for hover effect
     echo "<thead class='thead-dark'>";
     echo "<tr><th>Name</th><th>Email</th><th>City</th><th>Mobile</th></tr>";
