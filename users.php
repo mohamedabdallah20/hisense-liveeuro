@@ -6,14 +6,28 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: index-en.html"); // Redirect to login page
     exit;
 }
-$sql = "SELECT name, email,city,mobile,answer FROM form"; // Adjust the column names as per your database schema
+
+echo '<!DOCTYPE html><html lang="en"><head>';
+echo '<meta charset="UTF-8">';
+echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">';
+echo '<style>';
+echo '.container { margin-top: 50px; }';
+echo '.table { box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-color: #ffffff; }';
+echo '.table thead th { background-color: #343a40; color: #ffffff; }';
+echo '.table tbody td { vertical-align: middle; border-top: solid 1px #dee2e6; }';
+echo '.table-hover tbody tr:hover { background-color: #f8f9fa; }';
+echo '</style>';
+echo '</head><body>';
+
+$sql = "SELECT name, email, city, mobile FROM form"; // Adjust the column names as per your database schema
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<div class='container mt-4'>";
-    echo "<table class='table'>";
+    echo "<table class='table table-hover'>"; // Added 'table-hover' for hover effect
     echo "<thead class='thead-dark'>";
-    echo "<tr><th>name</th><th>email</th><th>city</th><th>mobile</th></tr>";
+    echo "<tr><th>Name</th><th>Email</th><th>City</th><th>Mobile</th></tr>";
     echo "</thead>";
     echo "<tbody>";
     // output data of each row
@@ -23,7 +37,8 @@ if ($result->num_rows > 0) {
     echo "</tbody></table>";
     echo "</div>";
 } else {
-    echo "0 results";
+    echo "<p class='text-center'>No results found.</p>";
 }
+echo '</body><style>.table thead th{background-color:#00a9a5 !important;color:#ffffff !important;}</style></html>';
 $conn->close();
 ?>
